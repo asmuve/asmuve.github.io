@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Banda - ASMUVE</title>
+    <style>
+        /* Estilos Generales Espejo de Index y Contacto */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            background-color: #000000;
+            color: #ffffff;
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        .top-bar {
+            height: 4px;
+            background-color: #7b1fa2; 
+            width: 100%;
+        }
+        header {
+            max-width: 1200px;
+            width: 100%;
+            margin: 0 auto;
+            padding: 1.5rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                gap: 1.5rem;
+                padding: 1rem;
+            }
+            nav ul {
+                gap: 1rem !important;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 2.5rem;
+        }
+        nav ul li a {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+        nav ul li a:hover {
+            color: #b388ff;
+        }
+        .social-icon-svg {
+            width: 18px;
+            height: 18px;
+            fill: #ffffff;
+            transition: fill 0.3s ease, transform 0.2s ease;
+            vertical-align: middle;
+        }
+        .social-icon-svg:hover {
+            fill: #b388ff;
+            transform: scale(1.1);
+        }
+        .social-header {
+            display: flex;
+            gap: 1.2rem;
+            align-items: center;
+        }
+
+        /* Sección de Contenido de la Banda */
+        main {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 3rem 2rem;
+            text-align: center;
+        }
+        .main-title {
+            font-size: 2.3rem;
+            letter-spacing: 4px;
+            margin-bottom: 0.5rem;
+            font-weight: bold;
+        }
+        .subtitle {
+            font-size: 0.9rem;
+            color: #aaaaaa;
+            letter-spacing: 1px;
+            margin-bottom: 3rem;
+        }
+        .bio-container {
+            max-width: 650px;
+            width: 100%;
+            text-align: justify;
+            line-height: 1.8;
+            font-size: 1rem;
+            color: #dddddd;
+            border-left: 2px solid #7b1fa2;
+            padding-left: 1.5rem;
+        }
+        .bio-container p {
+            margin-bottom: 1.5rem;
+        }
+
+        .divider {
+            width: 60px;
+            height: 1px;
+            background-color: #333333;
+            margin-top: 3rem;
+            margin-bottom: 1.5rem;
+        }
+        footer {
+            padding: 2rem 1rem;
+            text-align: center;
+            font-size: 0.8rem;
+            color: #888888;
+        }
+        .copyright {
+            font-size: 0.7rem;
+            margin-top: 1rem;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Línea morada superior -->
+    <div class="top-bar"></div>
+
+    <!-- Menú de Navegación -->
+    <header>
+        <div style="width: 40px;" class="desktop-only"></div> 
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="#">Fotos / Videos</a></li>
+                <li><a href="la-banda.html">La Banda</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+        <div class="social-header">
+            <a href="#" target="_blank"><svg class="social-icon-svg" viewBox="0 0 24 24"><path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c4.56-.93 8-4.96 8-9.75z"/></svg></a>
+            <a href="#" target="_blank"><svg class="social-icon-svg" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+            <a href="#" target="_blank"><svg class="social-icon-svg" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0 3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.051.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg></a>
+            <a href="#" target="_blank"><svg class="social-icon-svg" viewBox="0 0 24 24"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.02 1.59 4.23.12.13.26.26.4.38.01 1.34 0 2.68-.01 4.02-.99-.31-1.92-.83-2.73-1.49-.12-.1-.24-.2-.35-.31v5.93c.04 4.82-4.38 8.44-9.15 7.05-3.33-.97-5.46-4.49-4.57-7.87.67-2.58 2.94-4.37 5.62-4.41.01 1.43-.01 2.86 0 4.28-1.57.06-2.97 1.25-3.11 2.81-.19 2.1 1.69 3.86 3.75 3.5 1.44-.25 2.45-1.53 2.44-3v-15.12z"/></svg></a>
+            <a href="#" target="_blank"><svg class="social-icon-svg" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93 .502 5.814a3.016 3.016 0 002.122 2.136C18.711.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></a>
+        </div>
+    </header>
+
+    <main>
+        <h1 class="main-title">LA BANDA</h1>
+        <p class="subtitle">Historia y Sonido de la Vieja Escuela</p>
+        
+        <div class="bio-container">
+            <p>La Asociación Musical de la Vieja Escuela (ASMUVE) nació con el firme propósito de rescatar, preservar y difundir las grandes composiciones musicales que marcaron época, fusionando la disciplina clásica con la energía del talento local en Zacatecoluca.</p>
+            <p>A través de nuestras presentaciones en vivo, buscamos conectar a diferentes generaciones por medio de un repertorio nostálgico, potente y ejecutado con la más alta calidad artística. Somos músicos comprometidos con la identidad cultural y la evolución de nuestra comunidad musical.</p>
+        </div>
+
+        <div class="divider"></div>
+    </main>
+
+    <footer>
+        <p class="copyright">&copy; 2026 Creado por ASMUVE</p>
+    </footer>
+
+</body>
+</html>
