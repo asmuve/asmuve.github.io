@@ -3,73 +3,192 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi Sitio Web en GitHub</title>
+    <title>ASMUVE - Asociación Musical de la Vieja Escuela</title>
+    <!-- Iconos de FontAwesome para las redes sociales -->
+    <link rel="stylesheet" href="https://cloudflare.com">
     <style>
-        /* Estilos visuales básicos */
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
+        /* Estilos Generales */
+        * {
             margin: 0;
             padding: 0;
-            background-color: #f4f4f9;
-            color: #333;
+            box-shadow: border-box;
         }
+        body {
+            background-color: #000000;
+            color: #ffffff;
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        /* Línea decorativa superior morada */
+        .top-bar {
+            height: 4px;
+            background-color: #7b1fa2; /* Tono morado basado en tu imagen */
+            width: 100%;
+        }
+
+        /* Navegación Superior */
         header {
-            background-color: #24292e;
-            color: white;
-            padding: 2rem;
-            text-align: center;
+            max-width: 1200px;
+            width: 100%;
+            margin: 0 auto;
+            padding: 1.5rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
-        main {
-            max-width: 800px;
-            margin: 2rem auto;
-            padding: 0 1rem;
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 2.5rem;
         }
-        .card {
-            background: white;
-            padding: 2rem;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-        }
-        footer {
-            text-align: center;
-            padding: 1rem;
-            margin-top: 4rem;
-            font-size: 0.9rem;
-            color: #666;
-        }
-        .btn {
-            display: inline-block;
-            background: #2ea44f;
-            color: white;
-            padding: 0.5rem 1rem;
+        nav ul li a {
+            color: #ffffff;
             text-decoration: none;
-            border-radius: 5px;
-            margin-top: 1rem;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            font-weight: 500;
+            transition: color 0.3s ease;
         }
-        .btn:hover {
-            background: #22863a;
+        nav ul li a:hover {
+            color: #b388ff;
+        }
+
+        /* Redes Sociales del Header */
+        .social-header a {
+            color: #ffffff;
+            text-decoration: none;
+            margin-left: 1.2rem;
+            font-size: 0.9rem;
+            transition: color 0.3s ease;
+        }
+        .social-header a:hover {
+            color: #b388ff;
+        }
+
+        /* Contenido Central */
+        main {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 2rem;
+            text-align: center;
+        }
+        .main-title {
+            font-size: 2.5rem;
+            letter-spacing: 4px;
+            margin-bottom: 1.5rem;
+            font-weight: bold;
+        }
+        .logo-container {
+            max-width: 320px;
+            width: 100%;
+            margin-bottom: 2rem;
+        }
+        .logo-container img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* Línea separadora sutil antes del footer */
+        .divider {
+            width: 60px;
+            height: 1px;
+            background-color: #333333;
+            margin-bottom: 1.5rem;
+        }
+
+        /* Pie de Página */
+        footer {
+            padding: 2rem 1rem;
+            text-align: center;
+            font-size: 0.8rem;
+            color: #888888;
+        }
+        .social-footer {
+            margin-bottom: 1rem;
+        }
+        .social-footer p {
+            font-size: 0.75rem;
+            letter-spacing: 1px;
+            margin-bottom: 0.8rem;
+            color: #aaaaaa;
+        }
+        .social-footer-icons a {
+            color: #ffffff;
+            font-size: 1.1rem;
+            margin: 0 0.7rem;
+            transition: color 0.3s ease;
+        }
+        .social-footer-icons a:hover {
+            color: #b388ff;
+        }
+        .copyright {
+            font-size: 0.7rem;
+            margin-top: 0.5rem;
         }
     </style>
 </head>
 <body>
 
+    <!-- Línea morada superior -->
+    <div class="top-bar"></div>
+
+    <!-- Menú de Navegación -->
     <header>
-        <h1>¡Bienvenido a mi sitio web!</h1>
-        <p>Alojado gratuitamente gracias a GitHub Pages</p>
+        <!-- Espaciador izquierdo para equilibrar el diseño centrado si es necesario -->
+        <div style="width: 80px;" class="desktop-only"></div> 
+        
+        <nav>
+            <ul>
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Fotos / Videos</a></li>
+                <li><a href="#">La Banda</a></li>
+                <li><a href="#">Contacto</a></li>
+            </ul>
+        </nav>
+
+        <!-- Redes del menú superior -->
+        <div class="social-header">
+            <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="#" target="_blank"><i class="fab fa-tiktok"></i></a>
+            <a href="#" target="_blank"><i class="fab fa-youtube"></i></a>
+        </div>
     </header>
 
+    <!-- Contenido Principal -->
     <main>
-        <div class="card">
-            <h2>Sobre este proyecto</h2>
-            <p>Este es el archivo principal de mi página. He logrado configurarlo y subirlo directamente desde el navegador utilizando un repositorio público.</p>
-            <p>A partir de aquí, puedo modificar este texto, añadir imágenes o crear nuevas secciones para personalizarlo a mi gusto.</p>
-            <a href="#" class="btn">Saber más</a>
+        <h1 class="main-title">ASMUVE</h1>
+        
+        <div class="logo-container">
+            <!-- NOTA: Asegúrate de subir tu logo a GitHub con el nombre logo.png -->
+            <img src="logo.png" alt="Logotipo ASMUVE Zacatecoluca">
         </div>
+
+        <div class="divider"></div>
     </main>
 
+    <!-- Pie de Página -->
     <footer>
-        <p>© 2026 - Creado por Mí</p>
+        <div class="social-footer">
+            <p>Síguenos en:</p>
+            <div class="social-footer-icons">
+                <a href="https://www.facebook.com/ASMUVEsv" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a href="http://www.x.com/ASMUVE" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.instagram.com/asmuve" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="http://www.tiktiok.com/asmuve" target="_blank"><i class="fab fa-tiktok"></i></a>
+                <a href="https://www.youtube.com/LaViejaEscuelaBand" target="_blank"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+        <p class="copyright">&copy; 2026 Creado por ASMUVE</p>
     </footer>
 
 </body>
