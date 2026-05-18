@@ -79,29 +79,44 @@
             align-items: center;
         }
 
-        /* Sección Multimedia */
+        /* Sección Multimedia Principal */
         main {
             flex: 1;
             width: 100%;
             max-width: 1200px;
             margin: 0 auto;
             padding: 3rem 2rem;
-            text-align: center;
         }
         .main-title {
+            text-align: center;
             font-size: 2.3rem;
             letter-spacing: 4px;
             margin-bottom: 0.5rem;
             font-weight: bold;
         }
         .subtitle {
+            text-align: center;
             font-size: 0.9rem;
             color: #aaaaaa;
             letter-spacing: 1px;
-            margin-bottom: 3rem;
+            margin-bottom: 4rem;
         }
 
-        /* Rejilla de la Galería */
+        /* Estilos de las Categorías / Secciones */
+        .section-category {
+            margin-bottom: 4rem;
+        }
+        .section-category h2 {
+            font-size: 1.5rem;
+            letter-spacing: 2px;
+            margin-bottom: 1.5rem;
+            text-transform: uppercase;
+            border-left: 3px solid #7b1fa2;
+            padding-left: 1rem;
+            color: #ffffff;
+        }
+
+        /* Rejillas de las Galerías */
         .gallery-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -120,16 +135,16 @@
             border-color: #7b1fa2;
         }
         
-        /* Ajuste de imágenes y videos */
-        .gallery-item img, .gallery-item video {
+        /* Ajuste de imágenes y contenedores de video */
+        .gallery-item img {
             width: 100%;
-            height: 200px;
+            height: 220px;
             object-fit: cover;
             display: block;
         }
         .gallery-item .video-container {
             position: relative;
-            padding-bottom: 56.25%; /* Relación de aspecto 16:9 */
+            padding-bottom: 56.25%; /* Relación 16:9 */
             height: 0;
         }
         .gallery-item .video-container iframe {
@@ -145,9 +160,10 @@
             text-align: left;
         }
         .item-info h3 {
-            font-size: 1rem;
+            font-size: 0.95rem;
             letter-spacing: 1px;
             margin-bottom: 0.3rem;
+            color: #ffffff;
         }
         .item-info p {
             font-size: 0.8rem;
@@ -191,46 +207,85 @@
         <div class="social-header">
             <a href="#" target="_blank"><svg class="social-icon-svg" viewBox="0 0 24 24"><path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c4.56-.93 8-4.96 8-9.75z"/></svg></a>
             <a href="#" target="_blank"><svg class="social-icon-svg" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
-            <a href="#" target="_blank"><svg class="social-icon-svg" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.051.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg></a>
+            <a href="#" target="_blank"><svg class="social-icon-svg" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0 3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.051.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg></a>
             <a href="#" target="_blank"><svg class="social-icon-svg" viewBox="0 0 24 24"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.02 1.59 4.23.12.13.26.26.4.38.01 1.34 0 2.68-.01 4.02-.99-.31-1.92-.83-2.73-1.49-.12-.1-.24-.2-.35-.31v5.93c.04 4.82-4.38 8.44-9.15 7.05-3.33-.97-5.46-4.49-4.57-7.87.67-2.58 2.94-4.37 5.62-4.41.01 1.43-.01 2.86 0 4.28-1.57.06-2.97 1.25-3.11 2.81-.19 2.1 1.69 3.86 3.75 3.5 1.44-.25 2.45-1.53 2.44-3v-15.12z"/></svg></a>
             <a href="#" target="_blank"><svg class="social-icon-svg" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93 .502 5.814a3.016 3.016 0 002.122 2.136C18.711.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></a>
         </div>
     </header>
 
     <main>
-        <h1 class="main-title">GALERÍA</h1>
-        <p class="subtitle">Momentos y presentaciones de ASMUVE</p>
+        <h1 class="main-title">MULTIMEDIA</h1>
+        <p class="subtitle">El registro de nuestra trayectoria musical</p>
         
-        <div class="gallery-grid">
-            <!-- Elemento de Imagen 1 -->
-            <div class="gallery-item">
-                <img src="logo.png" alt="Presentación ASMUVE">
-                <div class="item-info">
-                    <h3>Concierto de Gala</h3>
-                    <p>Zacatecoluca, 2026</p>
+        <!-- SECCIÓN 1: ENSAYOS -->
+        <section class="section-category">
+            <h2>Ensayos</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <!-- Reemplaza logo.png por el nombre de tu foto de ensayo -->
+                    <img src="logo.png" alt="Ensayo General">
+                    <div class="item-info">
+                        <h3>Lectura de Partituras</h3>
+                        <p>Preparando nueva temporada</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="logo.png" alt="Ensayo de Vientos">
+                    <div class="item-info">
+                        <h3>Sección de Vientos</h3>
+                        <p>Afinación y acoplamiento técnico</p>
+                    </div>
                 </div>
             </div>
+        </section>
 
-            <!-- Elemento de Imagen 2 -->
-            <div class="gallery-item">
-                <img src="logo.png" alt="Ensayo General">
-                <div class="item-info">
-                    <h3>Ensayo General</h3>
-                    <p>Preparación de temporada</p>
+        <!-- SECCIÓN 2: EVENTOS -->
+        <section class="section-category">
+            <h2>Eventos</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <!-- Reemplaza logo.png por el nombre de tu foto de evento -->
+                    <img src="logo.png" alt="Evento Especial">
+                    <div class="item-info">
+                        <h3>Reunión Anual ASMUVE</h3>
+                        <p>Compartiendo con la comunidad</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="logo.png" alt="Taller Musical">
+                    <div class="item-info">
+                        <h3>Talleres Abiertos</h3>
+                        <p>Incentivando el arte local</p>
+                    </div>
                 </div>
             </div>
+        </section>
 
-            <!-- Elemento de Video (YouTube) -->
-            <div class="gallery-item">
-                <div class="video-container">
-                    <iframe src="https://youtube.com" allowfullscreen></iframe>
+        <!-- SECCIÓN 3: PRESENTACIONES -->
+        <section class="section-category">
+            <h2>Presentaciones</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <!-- Reemplaza logo.png por el nombre de tu foto de concierto -->
+                    <img src="logo.png" alt="Concierto de Gala">
+                    <div class="item-info">
+                        <h3>Concierto de Gala</h3>
+                        <p>Zacatecoluca, Teatro Principal</p>
+                    </div>
                 </div>
-                <div class="item-info">
-                    <h3>Video Promocional</h3>
-                    <p>Presentación de repertorio oficial</p>
+                <!-- Bloque con Video de YouTube incluido en Presentaciones -->
+                <div class="gallery-item">
+                    <div class="video-container">
+                        <!-- Cambia dQw4w9WgXcQ por el ID de tu video real -->
+                        <iframe src="https://youtube.com" allowfullscreen></iframe>
+                    </div>
+                    <div class="item-info">
+                        <h3>Video Oficial en Vivo</h3>
+                        <p>Resumen de la última presentación musical</p>
+                    </div>
                 </div>
             </div>
-        </div>
+        </section>
 
         <div class="divider"></div>
     </main>
