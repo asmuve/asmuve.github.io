@@ -1,203 +1,238 @@
-```html
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - ASMUVE</title>
+    <style>
+        /* Estilos Generales Estricto Espejo de Index */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            background-color: #000000;
+            color: #ffffff;
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
 
+        /* Línea decorativa superior morada */
+        .top-bar {
+            height: 4px;
+            background-color: #7b1fa2; 
+            width: 100%;
+        }
 
+        /* Navegación Superior */
+        header {
+            max-width: 1200px;
+            width: 100%;
+            margin: 0 auto;
+            padding: 1.5rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                gap: 1.5rem;
+                padding: 1rem;
+            }
+            nav ul {
+                gap: 1rem !important;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+        }
 
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 2.5rem;
+        }
+        nav ul li a {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+        nav ul li a:hover {
+            color: #b388ff;
+        }
 
+        .social-icon-svg {
+            width: 18px;
+            height: 18px;
+            fill: #ffffff;
+            transition: fill 0.3s ease, transform 0.2s ease;
+            vertical-align: middle;
+        }
+        .social-icon-svg:hover {
+            fill: #b388ff;
+            transform: scale(1.1);
+        }
 
-Contacto - ASMUVE
+        .social-header {
+            display: flex;
+            gap: 1.2rem;
+            align-items: center;
+        }
 
-/* Estilos Generales Estricto Espejo de Index */
-* {
-margin: 0;
-padding: 0;
-box-sizing: border-box;
-}
-body {
-background-color: #000000;
-color: #ffffff;
-font-family: 'Helvetica Neue', Arial, sans-serif;
-display: flex;
-flex-direction: column;
-min-height: 100vh;
-}
-/* Línea decorativa superior morada */
-.top-bar {
-height: 4px;
-background-color: #7b1fa2;
-width: 100%;
-}
-/* Navegación Superior */
-header {
-max-width: 1200px;
-width: 100%;
-margin: 0 auto;
-padding: 1.5rem 2rem;
-display: flex;
-justify-content: space-between;
-align-items: center;
-}
-@media (max-width: 768px) {
-header {
-flex-direction: column;
-gap: 1.5rem;
-padding: 1rem;
-}
-nav ul {
-gap: 1rem !important;
-flex-wrap: wrap;
-justify-content: center;
-}
-}
-nav ul {
-list-style: none;
-display: flex;
-gap: 2.5rem;
-}
-nav ul li a {
-color: #ffffff;
-text-decoration: none;
-font-size: 0.75rem;
-text-transform: uppercase;
-letter-spacing: 1.5px;
-font-weight: 500;
-transition: color 0.3s ease;
-}
-nav ul li a:hover {
-color: #b388ff;
-}
-.social-icon-svg {
-width: 18px;
-height: 18px;
-fill: #ffffff;
-transition: fill 0.3s ease, transform 0.2s ease;
-vertical-align: middle;
-}
-.social-icon-svg:hover {
-fill: #b388ff;
-transform: scale(1.1);
-}
-.social-header {
-display: flex;
-gap: 1.2rem;
-align-items: center;
-}
-/* Contenido Central Especial de Contacto */
-main {
-flex: 1;
-display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: center;
-padding: 2rem;
-text-align: center;
-}
-.main-title {
-font-size: 2.3rem;
-letter-spacing: 4px;
-margin-bottom: 0.5rem;
-font-weight: bold;
-}
-.subtitle {
-font-size: 0.9rem;
-color: #aaaaaa;
-letter-spacing: 1px;
-margin-bottom: 3rem;
-}
-/* Contenedor de Botones de Contacto */
-.contact-container {
-display: flex;
-flex-direction: column;
-gap: 1.2rem;
-width: 100%;
-max-width: 350px;
-}
-.contact-btn {
-display: flex;
-align-items: center;
-justify-content: center;
-gap: 1rem;
-padding: 1rem 2rem;
-color: #ffffff;
-text-decoration: none;
-font-size: 0.9rem;
-letter-spacing: 1px;
-text-transform: uppercase;
-font-weight: 500;
-border: 1px solid #333333;
-border-radius: 4px;
-background-color: transparent;
-transition: all 0.3s ease;
-}
-/* Efectos Hover personalizados con la paleta de la banda */
-.contact-btn:hover {
-border-color: #b388ff;
-background-color: #120a1c;
-transform: translateY(-2px);
-}
-.contact-btn svg {
-width: 20px;
-height: 20px;
-fill: #ffffff;
-transition: fill 0.3s ease;
-}
-.contact-btn:hover svg {
-fill: #b388ff;
-}
-/* Línea separadora antes del footer */
-.divider {
-width: 60px;
-height: 1px;
-background-color: #333333;
-margin-top: 3rem;
-margin-bottom: 1.5rem;
-}
-/* Pie de Página */
-footer {
-padding: 2rem 1rem;
-text-align: center;
-font-size: 0.8rem;
-color: #888888;
-}
-.copyright {
-font-size: 0.7rem;
-margin-top: 1rem;
-}
+        /* Contenido Central Especial de Contacto */
+        main {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 2rem;
+            text-align: center;
+        }
+        .main-title {
+            font-size: 2.3rem;
+            letter-spacing: 4px;
+            margin-bottom: 0.5rem;
+            font-weight: bold;
+        }
+        .subtitle {
+            font-size: 0.9rem;
+            color: #aaaaaa;
+            letter-spacing: 1px;
+            margin-bottom: 3rem;
+        }
 
+        /* Contenedor de Botones de Contacto arreglado */
+        .contact-container {
+            display: flex;
+            flex-direction: column;
+            gap: 1.2rem;
+            width: 100%;
+            max-width: 350px;
+        }
+        .contact-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+            padding: 1rem 2rem;
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 0.9rem;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            font-weight: 500;
+            border: 1px solid #333333;
+            border-radius: 4px;
+            background-color: transparent;
+            width: 100%;
+            transition: all 0.3s ease;
+        }
+        
+        /* Efectos Hover personalizados con la paleta de la banda */
+        .contact-btn:hover {
+            border-color: #b388ff;
+            background-color: #120a1c;
+            transform: translateY(-2px);
+        }
+        .contact-btn svg {
+            width: 20px;
+            height: 20px;
+            fill: #ffffff;
+            transition: fill 0.3s ease;
+        }
+        .contact-btn:hover svg {
+            fill: #b388ff;
+        }
 
+        /* Línea separadora antes del footer */
+        .divider {
+            width: 60px;
+            height: 1px;
+            background-color: #333333;
+            margin-top: 3rem;
+            margin-bottom: 1.5rem;
+        }
 
+        /* Pie de Página */
+        footer {
+            padding: 2rem 1rem;
+            text-align: center;
+            font-size: 0.8rem;
+            color: #888888;
+        }
+        .copyright {
+            font-size: 0.7rem;
+            margin-top: 1rem;
+        }
+    </style>
+</head>
+<body>
 
+    <!-- Línea morada superior -->
+    <div class="top-bar"></div>
 
+    <!-- Menú de Navegación -->
+    <header>
+        <div style="width: 40px;" class="desktop-only"></div> 
+        
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="#">Fotos / Videos</a></li>
+                <li><a href="#">La Banda</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
 
-Inicio
-Fotos / Videos
-La Banda
-Contacto
+        <div class="social-header">
+            <a href="#" target="_blank"><svg class="social-icon-svg" viewBox="0 0 24 24"><path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c4.56-.93 8-4.96 8-9.75z"/></svg></a>
+            <a href="#" target="_blank"><svg class="social-icon-svg" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+            <a href="#" target="_blank"><svg class="social-icon-svg" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.051.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg></a>
+            <a href="#" target="_blank"><svg class="social-icon-svg" viewBox="0 0 24 24"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.02 1.59 4.23.12.13.26.26.4.38.01 1.34 0 2.68-.01 4.02-.99-.31-1.92-.83-2.73-1.49-.12-.1-.24-.2-.35-.31v5.93c.04 4.82-4.38 8.44-9.15 7.05-3.33-.97-5.46-4.49-4.57-7.87.67-2.58 2.94-4.37 5.62-4.41.01 1.43-.01 2.86 0 4.28-1.57.06-2.97 1.25-3.11 2.81-.19 2.1 1.69 3.86 3.75 3.5 1.44-.25 2.45-1.53 2.44-3v-15.12z"/></svg></a>
+            <a href="#" target="_blank"><svg class="social-icon-svg" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93 .502 5.814a3.016 3.016 0 002.122 2.136C18.711.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></a>
+        </div>
+    </header>
 
+    <main>
+        <h1 class="main-title">CONTACTO</h1>
+        <p class="subtitle">Conéctate con la Vieja Escuela</p>
+        
+        <!-- Bloque contenedor de botones -->
+        <div class="contact-container">
+            <!-- Opción 1: WhatsApp -->
+            <a href="https://wa.me." class="contact-btn" target="_blank">
+                <svg viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.713-1.457L0 24zm6.59-4.846c1.6.95 3.188 1.449 4.825 1.451 5.436 0 9.86-4.413 9.863-9.832.002-2.623-1.023-5.09-2.885-6.956C16.528 1.861 14.065.835 11.445.833c-5.443 0-9.866 4.415-9.87 9.836-.001 1.702.449 3.361 1.306 4.81l-.988 3.605 3.754-.984zm11.455-7.616c-.3-.15-1.776-.877-2.051-.976-.275-.1-.475-.15-.675.15-.2.3-.775.976-.95 1.176-.175.2-.35.225-.65.075-1.04-.519-1.83-1.02-2.54-2.24-.2-.35-.02-.54.155-.715.162-.156.35-.41.525-.615.175-.2.234-.34.35-.565.114-.23.057-.429-.028-.579-.086-.15-.675-1.627-.925-2.226-.243-.585-.49-.506-.675-.515-.174-.008-.375-.01-.576-.01-.2 0-.525.075-.8.375-.275.3-1.05 1.026-1.05 2.5s1.075 2.9 1.225 3.1c.15.2 2.11 3.224 5.11 4.526.714.31 1.272.496 1.707.635.717.227 1.37.195 1.887.118.577-.087 1.777-.726 2.027-1.426.25-.7 0-1.294-.075-1.426-.075-.113-.275-.213-.575-.363z"/></svg>
+                WhatsApp
+            </a>
 
+            <!-- Opción 2: Telegram -->
+            <a href="https://t.me" class="contact-btn" target="_blank">
+                <svg viewBox="0 0 24 24"><path d="M11.944 0C5.344 0 0 5.344 0 11.944c0 5.622 3.88 10.331 9.125 11.632l-.161-2.4c-.092-1.367.653-2.182 1.266-2.71 3.805-3.36 7.726-3.708 7.726-10.05 0-3.167-2.316-5.832-6.012-5.832zm4.787 7.4c-.161.85-.945 5.518-1.336 7.6-.164.88-.49 1.176-.803 1.205-.688.064-1.21-.453-1.876-.891-1.042-.686-1.63-1.114-2.643-1.782-1.17-.773-.41-1.2.256-1.887.174-.18 3.197-2.933 3.256-3.186.007-.032.014-.15-.056-.213-.07-.063-.174-.041-.25-.024-.106.024-1.802 1.144-5.088 3.362-.482.33-.918.492-1.309.48-.431-.013-1.262-.247-1.88-.448-.758-.247-1.36-.378-1.308-.8.027-.219.33-.445.908-.677 3.55-1.542 5.918-2.559 7.104-3.053 3.378-1.411 4.08-1.656 4.536-1.664.1-.002.324.023.47.142.122.1.156.24.17.34.025.176.03.5.012.723z"/></svg>
+                Telegram
+            </a>
 
+            <!-- Opción 3: Email -->
+            <a href="mailto:correo@://asmuve.com," class="contact-btn">
+                <svg viewBox="0 0 24 24"><path d="M0 3v18h24v-18h-24zm21.518 2l-9.518 7.713-9.518-7.713h19.036zm-19.518 14v-11.817l10 8.104 10-8.104v11.817h-20z"/></svg>
+                Correo Electrónico
+            </a>
+        </div>
 
+        <div class="divider"></div>
+    </main>
 
+    <footer>
+        <p class="copyright">&copy; 2026 Creado por ASMUVE</p>
+    </footer>
 
-
-
-
-CONTACTO
-Conéctate con la Vieja Escuela
-
-
-
-
-WhatsApp
-
-
-
-
-Telegram
-
-
-
-
-Correo Electrónico
-
-
-© 2026 Creado por ASMUVE
+</body>
+</html>
